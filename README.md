@@ -1,46 +1,5 @@
 ![Logo Institucional](https://github.com/JonatanBogadoUNLZ/PPS-Jonatan-Bogado/blob/9952aac097aca83a1aadfc26679fc7ec57369d82/LOGO%20AZUL%20HORIZONTAL%20-%20fondo%20transparente.png)
 
-# UNLZ — Facultad de Ingeniería (Plantilla de Proyecto)
-## Ingeniería Mecatrónica — README + estructura estándar
-
-Este repositorio es una **PLANTILLA**.  
-Los estudiantes deben **usar este repo como base** (fork o “Use this template”) y **reemplazar los textos entre corchetes** `[ ... ]` con la información real de su proyecto.
-
----
-
-## 📛 Naming del repositorio (OBLIGATORIO)
-
-El nombre del repositorio debe seguir este esquema:
-
-**`ANIO_CUATRIMESTRE_TIPO_PROYECTO_APELLIDOS`**
-
-Donde:
-- **ANIO**: año de cursada (ej. `2026`)
-- **CUATRIMESTRE**: `1C` o `2C`
-- **TIPO**: `PPS` o `PF` (Proyecto Final)
-- **PROYECTO**: nombre corto *sin espacios* (recomendado: `kebab-case` o `CamelCase`)
-- **APELLIDOS**: apellidos de integrantes separados por `_` (sin tildes, sin ñ)
-
-✅ Ejemplos:
-- `2026_1C_PPS_ComederoSmart_Salto_Vazquez`
-- `2026_2C_PF_MecaChess_Duarte_Diaz`
-- `2025_2C_PPS_Escaner3D_DalleRivePrieto_Labreniuk`
-
-> Nota: GitHub **no permite** usar “/” en el nombre del repositorio.  
-> Por eso se usa **TIPO = PPS o PF** como campo separado.
-
----
-
-## 🧩 Cómo usar esta plantilla (estudiantes)
-
-0) **Crear el repo con el nombre correcto (OBLIGATORIO)**  
-   Esquema: `ANIO_CUATRIMESTRE_TIPO_PROYECTO_APELLIDOS`
-
-1) Crear tu repositorio desde esta plantilla:
-   - Opción A (recomendada): **Use this template** → Create a new repository  
-   - Opción B: **Fork**
-
-2) Editar este archivo `README.md` completando todos los campos `[ ... ]`.
 
 3) Subir archivos a las carpetas correspondientes:
    - Código en `CODIGO/`
