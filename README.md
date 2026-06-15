@@ -95,8 +95,79 @@ A continuación se presenta el diagrama general del sistema desarrollado. En él
 ![Diagrama general del sistema](./Imagenes/DiagramaGeneral.png)
 
 # 🖼️ Fotos
+
+A continuación se presentan algunas imágenes representativas de las distintas etapas del desarrollo y del resultado final de la máquina.
+
+## Modelo CAD
+
+![Diagrama general del sistema](./Imagenes/Fotos/ModeloCAD.png)
+
+## Máquina ensamblada
+
+![Diagrama general del sistema](./Imagenes/Fotos/MaquinaCompleta.jpg)
+
+## Estructura mecánica
+
+![Diagrama general del sistema](./Imagenes/Fotos/EstructuraMecanica.jpg)
+
+## Sistema electrónico
+
+![Diagrama general del sistema](./Imagenes/Fotos/SistemaElectronico.jpg)
+
 # 📝 Instrucciones de uso
+
+
+La operación de la máquina se realiza mediante archivos de código G generados a partir del perfil o geometría que se desea cortar. La elección del software utilizado para generar dichas trayectorias queda a criterio del usuario, siempre que produzca código G compatible con la controladora empleada.
+
+El procedimiento general de utilización es el siguiente:
+
+1. Generar el archivo de código G correspondiente a la pieza deseada.
+2. Transferir el archivo a la Raspberry Pi mediante un dispositivo de almacenamiento USB o a través de la red local.
+3. Energizar el sistema:
+   - Fuente de alimentación de 24 V.
+   - Fuente de alimentación de 48 V.
+   - Raspberry Pi.
+4. Ejecutar el software de control CNC instalado en la Raspberry Pi.
+5. Cargar el archivo de código G.
+6. Verificar la posición inicial de los ejes y las condiciones de operación.
+7. Iniciar la ejecución del programa.
+8. Supervisar el proceso hasta su finalización.
+
+> **Importante:** Antes de iniciar cualquier movimiento se debe verificar el correcto funcionamiento de los ejes y la adecuada configuración de los parámetros de la máquina.
+
 # 📁 Estructura del repositorio
+
+
+```text
+2026_1C_PPS_CoradoraDePolifanCNC_Coluccio/
+│
+├── README.md
+│
+├── CAD/
+│   └── Ensamble.step
+│
+├── Datasheets/
+│   ├── M542.pdf
+│   ├── RaspberryPi4.pdf
+│   ├── RATTMOTOR.pdf
+│   └── ...
+│
+├── Documentacion/
+│    └── Informe.pdf
+│
+└──Imagenes/
+    ├── LogoInstitucional.png
+    ├── DiagramaGeneral.png
+    │
+    └── Fotos/
+        ├── ModeloCAD.png
+        ├── MaquinaCompleta.jpg
+        ├── EstructuraMecanica.jpg
+        └── SistemaElectronico.jpg
+```
+
+El repositorio contiene la documentación técnica, modelos CAD, fotografías, esquemáticos y hojas de datos de los principales componentes utilizados durante el desarrollo del proyecto. Además, se incluye una versión del ensamblaje completo en formato STEP para facilitar su visualización y reutilización en distintos programas CAD.
+
 # 👤 Autor
 
 
