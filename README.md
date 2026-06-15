@@ -1,12 +1,12 @@
 ![Diagrama general del sistema](./Imagenes/LogoInstitucional.png)
 ---
 <h1 align="center">
-  Cortadora de polifan CNC orientada a protoripos de alas de aviones livianos
+  Cortadora de polifan CNC orientada a prototipos de alas de aviones livianos
 </h1>
 
 <p align="center">
-  <b>Practica profesional supervisada - Ingeniería Mecatrónica</b><br>
-  <b>Facultad de Ingeniería - Universidad nacional de Lomas de zamora</b><br>
+  <b>Práctica profesional supervisada - Ingeniería Mecatrónica</b><br>
+  <b>Facultad de Ingeniería - Universidad Nacional de Lomas de zamora</b><br>
   <b>Coluccio Valentin - 1C 2026 </b>
 </p>
 
@@ -15,10 +15,10 @@
 # 📑 Índice
 1. [Introducción](#-introducción)
 2. [Objetivo](#-objetivo)
-3. [Descripción técnica](#-descripción-técnica)
+3. [Descripción técnica](#️-descripción-técnica)
 4. [Tecnologías utilizadas](#-tecnologías-utilizadas)
 5. [Listado de componentes](#-listado-de-componentes)
-6. [Esquemáticos](#-esquemáticos)
+6. [Esquemático](#-esquemático)
 7. [Fotos](#-fotos)
 8. [Instrucciones de uso](#-instrucciones-de-uso)
 9. [Estructura del repositorio](#-estructura-del-repositorio)
@@ -139,7 +139,7 @@ El procedimiento general de utilización es el siguiente:
 
 
 ```text
-2026_1C_PPS_CoradoraDePolifanCNC_Coluccio/
+2026_1C_PPS_CortadoraDePolifanCNC_Coluccio/
 │
 ├── README.md
 │
@@ -170,9 +170,20 @@ El repositorio contiene la documentación técnica, modelos CAD, fotografías, e
 
 # 👤 Autor
 
+<div align="center">
 
+**Valentín Coluccio** 
 
+Ingeniería Mecatrónica – Universidad Nacional de Lomas de Zamora (FI-UNLZ)
 
+<a href="https://github.com/ValentinColuccio"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+ <a href="https://www.linkedin.com/in/valentin-coluccio-804301359/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a> 
+
+---
+
+<p align="center">
+  <img src="Imagenes/LogoInstitucional.png" alt="Logo FiUNLZ" width="320">
+</p>
 
 
 
