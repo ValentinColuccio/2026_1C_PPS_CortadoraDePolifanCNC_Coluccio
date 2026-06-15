@@ -1,222 +1,107 @@
-![Logo Institucional](https://github.com/JonatanBogadoUNLZ/PPS-Jonatan-Bogado/blob/9952aac097aca83a1aadfc26679fc7ec57369d82/LOGO%20AZUL%20HORIZONTAL%20-%20fondo%20transparente.png)
+![Diagrama general del sistema](./Imagenes/LogoInstitucional.png)
+---
+<h1 align="center">
+  Cortadora de polifan CNC orientada a protoripos de alas de aviones livianos
+</h1>
 
-
-3) Subir archivos a las carpetas correspondientes:
-   - Código en `CODIGO/`
-   - Planos y esquemas en `PLANOS/`
-   - Fotos / videos en `MULTIMEDIA/`
-   - Datasheets en `DATASHEET/`
-   - Informes en `INFORMES/`
+<p align="center">
+  <b>Practica profesional supervisada - Ingeniería Mecatrónica</b><br>
+  <b>Facultad de Ingeniería - Universidad nacional de Lomas de zamora</b><br>
+  <b>Coluccio Valentin - 1C 2026 </b>
+</p>
 
 ---
 
-## ✅ Checklist de entrega
-- [ ] Naming correcto del repo: `ANIO_CUATRIMESTRE_TIPO_PROYECTO_APELLIDOS`
-- [ ] Título, autores, materia, **tipo (PPS/PF)**, año y cuatrimestre completos
-- [ ] Brief completo (one-liner + pitch + problema + solución + alcance + estado)
-- [ ] Instrucciones de uso reproducibles (otro puede correrlo)
-- [ ] Lista de componentes con cantidades y modelos
-- [ ] Esquemáticos/planos adjuntos en `PLANOS/`
-- [ ] Fotos / video demostración en `MULTIMEDIA/`
-- [ ] Informe PDF en `INFORMES/` (si aplica)
-
+# 📑 Índice
+1. [Introducción](#-introducción)
+2. [Objetivo](#-objetivo)
+3. [Descripción técnica](#-descripción-técnica)
+4. [Tecnologías utilizadas](#-tecnologías-utilizadas)
+5. [Listado de componentes](#-listado-de-componentes)
+6. [Esquemáticos](#-esquemáticos)
+7. [Fotos](#-fotos)
+8. [Instrucciones de uso](#-instrucciones-de-uso)
+9. [Estructura del repositorio](#-estructura-del-repositorio)
+10. [Autor](#-autor)
 ---
 
-# [TÍTULO DEL PROYECTO]
+# 📌 Introducción
+El presente repositorio documenta el desarrollo de una **Práctica Profesional Supervisada (PPS – 2026, 1.º cuatrimestre)**, realizada en el área del modelismo aeronáutico.
 
-**Tipo:** [PPS | PF]  
-**Año:** [2026] — **Cuatrimestre:** [1C | 2C]  
+Dentro del proceso de diseño y fabricación de aeronaves a escala, una de las etapas más importantes es la construcción de las alas. Estas suelen fabricarse a partir de núcleos de poliestireno expandido (EPS, comúnmente denominado telgopor o polifan), los cuales posteriormente son mecanizados y recubiertos con materiales compuestos, como fibra de vidrio o fibra de carbono, para obtener la geometría y resistencia estructural requeridas.
 
-**Carrera:** Ingeniería Mecatrónica  
-**Materia / Curso:** [NOMBRE_DE_LA_MATERIA]  
-**Docente / Cátedra:** [NOMBRE_DOCENTE]  
-**Autor/es:** [APELLIDO, Nombre — Legajo] · [APELLIDO, Nombre — Legajo]
+Actualmente, la oferta de máquinas destinadas al corte de núcleos alares es limitada. Las soluciones comerciales disponibles suelen presentar costos elevados, áreas de trabajo reducidas o requerir desarrollos específicos para cada aplicación. Como consecuencia, gran parte de los fabricantes y aficionados recurren a equipos personalizados o a procesos manuales, lo que incrementa los tiempos de producción y reduce la repetibilidad de los resultados.
 
----
+# 🎯 Objetivo
+El objetivo del presente proyecto fue diseñar y desarrollar una máquina de corte por hilo caliente controlada numéricamente (CNC), destinada a la fabricación de perfiles y núcleos alares de poliestireno expandido.
 
-## Introducción / Objetivo
+Tomando como punto de partida un diseño conceptual desarrollado aproximadamente diez años atrás, se realizó el rediseño integral de la estructura mecánica, el sistema de accionamiento, la electrónica de control y la arquitectura de software necesarias para su funcionamiento. El alcance del proyecto incluyó la construcción y puesta en marcha de la máquina, quedando excluido únicamente el desarrollo definitivo del sistema de calentamiento del hilo de corte.
 
-**Contexto (2–4 líneas):**  
-[Describir contexto general y necesidad.]
+# ⚙️ Descripción técnica
+La máquina desarrollada consiste en una cortadora CNC de hilo caliente de cuatro ejes, diseñada para el mecanizado de piezas de poliestireno expandido (EPS) utilizadas principalmente en la fabricación de alas para aeromodelismo.
 
-**Problema a resolver:**  
-[Describir el problema de forma concreta.]
+El sistema emplea un hilo resistivo calentado eléctricamente que funde el material durante el avance, permitiendo obtener perfiles de alta precisión sin generar esfuerzos mecánicos significativos sobre la pieza.
 
-**Objetivo general:**  
-[Qué logra el sistema.]
+La estructura mecánica está compuesta principalmente por perfilería y placas de aluminio, seleccionadas por su adecuada relación entre rigidez, resistencia mecánica y bajo peso. Adicionalmente, los soportes de los motores fueron fabricados mediante impresión 3D e incorporan insertos roscados metálicos para asegurar una fijación confiable y facilitar las tareas de montaje y mantenimiento.
 
-**Objetivos específicos (opcional):**
-- [Objetivo 1]
-- [Objetivo 2]
-- [Objetivo 3]
+El sistema dispone de cuatro ejes lineales independientes accionados por motores paso a paso, permitiendo controlar de manera individual la posición de ambos extremos del hilo de corte. Esta configuración posibilita la fabricación de perfiles alares de geometría variable y la realización de cortes complejos, donde la forma de un extremo de la pieza puede diferir de la del otro.
 
----
+El control de movimiento se realiza mediante una Raspberry Pi 4B y una controladora CNC compatible con GRBL, encargadas de interpretar trayectorias definidas en código G y coordinar los desplazamientos de los distintos ejes. La electrónica de potencia está compuesta por controladores externos para motores paso a paso y una fuente de alimentación de corriente continua para el sistema.
 
-## Índice
-- [Brief](#brief)
-- [Descripción técnica](#descripción-técnica)
-- [Arquitectura del sistema](#arquitectura-del-sistema)
-- [Instrucciones de uso](#instrucciones-de-uso)
-- [Tecnologías utilizadas](#tecnologías-utilizadas)
-- [Listado de componentes](#listado-de-componentes)
-- [Esquemáticos / Planos](#esquemáticos--planos)
-- [Fotos / Videos](#fotos--videos)
-- [Estructura del repositorio](#estructura-del-repositorio)
-- [Autor](#autor)
-- [Licencia](#licencia)
+El diseño fue concebido con una filosofía modular, permitiendo futuras mejoras tanto en la estructura mecánica como en los sistemas de control y automatización.
 
----
+# 🧰 Tecnologías utilizadas
 
-## Brief
+Durante el desarrollo del proyecto se emplearon distintas tecnologías de diseño, fabricación, control y asistencia técnica:
 
-**One-liner (1 frase):**  
-[Qué hace el proyecto + para quién + beneficio principal.]
+| Tecnología                                                    | Aplicación                                                                                                                               |
+| ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| CATIA                                                         | Diseño y modelado de componentes mecánicos de la máquina.                                                                                |
+| SolidWorks                                                    | Modelado y validación de conjuntos mecánicos específicos.                                                                                |
+| Autodesk Fusion 360                                           | Diseño de piezas y generación de trayectorias de mecanizado (CAM) para la fabricación de componentes.                                    |
+| Manufactura CNC                                               | Fabricación de placas y componentes estructurales de aluminio a partir de los diseños CAD.                                               |
+| Impresión 3D                                                  | Fabricación de soportes de motores y piezas auxiliares de montaje.                                                                       |
+| Raspberry Pi 4B                                               | Plataforma de control utilizada para la ejecución del software CNC.                                                                      |
+| Linux                                                         | Sistema operativo empleado en la Raspberry Pi para la ejecución y administración del sistema.                                            |
+| GRBL                                                          | Firmware encargado de interpretar el código G y controlar el movimiento de los ejes.                                                     |
+| Código G                                                      | Lenguaje utilizado para definir las trayectorias y operaciones de mecanizado.                                                            |
+| Inteligencia Artificial Generativa (ChatGPT, Gemini y Claude) | Herramientas de asistencia utilizadas durante las etapas de diseño, investigación, resolución de problemas y documentación del proyecto. |
 
-**Elevator pitch (30 segundos):**  
-Este proyecto **[nombre del proyecto]** (tipo **[PPS/PF]**, **[AÑO] [CUATRIMESTRE]**) resuelve **[problema]** mediante **[solución]**.  
-Está orientado a **[público objetivo]** y permite **[beneficio medible]**.  
-Se implementa con **[tecnologías clave]** y se valida mediante **[pruebas/mediciones/demo]**.
+# 📦 Listado de componentes
 
-### Problema
-- **Contexto:** [laboratorio / industria / hogar / aula / etc.]
-- **Dolor principal:** [qué falla / qué es lento / qué es costoso / qué es riesgoso]
-- **Impacto:** [tiempo, costo, errores, seguridad, calidad]
+| Componente                        | Cantidad     | Descripción                                       |
+| --------------------------------- | ------------ | ------------------------------------------------- |
+| Raspberry Pi 4B                   | 1            | Sistema principal de control.                     |
+| Controladora CNC GRBL (RATTMOTOR) | 1            | Generación de señales STEP/DIR para los ejes.     |
+| Driver M542                       | 4            | Control de potencia para motores paso a paso.     |
+| Motor paso a paso 57HS22          | 2            | Accionamiento de los ejes principales.            |
+| Motor paso a paso 24H2A9830       | 2            | Accionamiento de los ejes secundarios.            |
+| Fuente de alimentación 48 VCC     | 1            | Alimentación de los drivers y motores.            |
+| Fuente de alimentación 24 VCC     | 1            | Alimentación de la controladora CNC.              |
+| Tornillos de avance               | 4            | Conversión de movimiento rotacional a lineal.     |
+| Guías lineales                    | 8            | Guiado y posicionamiento de los carros móviles.   |
+| Rodamientos lineales              | 16           | Desplazamiento de los carros sobre las guías.     |
+| Acoples flexibles                 | 4            | Acoplamiento entre motores y tornillos de avance. |
+| Perfilería de aluminio            | Según diseño | Estructura principal de la máquina.               |
+| Placas de aluminio mecanizadas    | Varias       | Uniones estructurales, soportes y carros móviles. |
+| Piezas impresas en 3D             | Varias       | Soportes de motores y componentes auxiliares.     |
 
-### Solución propuesta
-- **Qué hace (features):**
-  - [Funcionalidad 1]
-  - [Funcionalidad 2]
-  - [Funcionalidad 3]
-- **Cómo lo hace (alto nivel):** [sensor → control → actuador → visualización]
-- **Valor diferencial:** [por qué es mejor / distinto]
+> **Nota:** Las cantidades y dimensiones exactas de los elementos mecánicos pueden variar según la configuración y el área útil de trabajo.
 
-### Alcance
-**Incluye:**
-- [X]
-- [Y]
+# 📐 Esquemático
 
-**No incluye (por ahora):**
-- [A]
-- [B]
+A continuación se presenta el diagrama general del sistema desarrollado. En él se muestran los principales componentes de la arquitectura de control, alimentación y accionamiento de la máquina, así como las interconexiones entre ellos.
 
-### Estado del proyecto
-- **Madurez:** [idea / prototipo / MVP / validado]
-- **Qué funciona hoy:** [lista corta]
-- **Próximos pasos:** [lista corta]
+![Diagrama general del sistema](./Imagenes/DiagramaGeneral.png)
 
-### Demo rápida
-- **Video / GIF:** [link o ruta en MULTIMEDIA]
-- **Instrucciones express (2 minutos):**
-  1) [Paso 1]
-  2) [Paso 2]
-  3) [Paso 3]
+# 🖼️ Fotos
+# 📝 Instrucciones de uso
+# 📁 Estructura del repositorio
+# 👤 Autor
 
----
 
-## Descripción técnica
-[Explicación técnica del funcionamiento, decisiones de diseño y consideraciones.]
 
----
 
-## Arquitectura del sistema
 
-**Entradas (sensores / señales):**
-- [Sensor 1]
-- [Sensor 2]
 
-**Procesamiento / Control:**
-- [Microcontrolador / PC / algoritmo / lógica]
 
-**Salidas (actuadores / señales):**
-- [Actuador 1]
-- [Actuador 2]
-
-**Interfaz (si aplica):**
-- [Pantalla / dashboard / app / web]
-
-> (Opcional) Insertar diagrama:
-![Diagrama de bloques](PLANOS/diagrama_bloques.png)
-
----
-
-## Instrucciones de uso
-
-### Requisitos previos
-- [Software / IDE]
-- [Drivers / librerías]
-- [Hardware mínimo]
-
-### Instalación / Puesta en marcha
-1) [Clonar / descargar]
-2) [Instalar dependencias]
-3) [Cargar firmware / ejecutar]
-4) [Validar funcionamiento]
-
-### Uso
-- **Modo normal:** [cómo se usa]
-- **Calibración (si aplica):** [pasos]
-- **Notas:** [cuidados, recomendaciones]
-
-### Troubleshooting (opcional)
-- **Problema:** [X] → **Solución:** [Y]
-- **Problema:** [X] → **Solución:** [Y]
-
----
-
-## Tecnologías utilizadas
-- **Robótica / Control:** [Arduino / ESP32 / Raspberry / etc.]
-- **Electrónica:** [sensores / drivers / etc.]
-- **Programación:** [C/C++ / Python / etc.]
-- **Plataformas / Tools:** [ROS / OpenCV / etc.]
-- **IA (si aplica):** [modelo / técnica]
-
----
-
-## Listado de componentes
-
-| Componente | Cantidad | Modelo / Especificación | Función |
-|---|---:|---|---|
-| [Componente 1] | [1] | [Modelo] | [Función] |
-| [Componente 2] | [2] | [Modelo] | [Función] |
-| [Componente 3] | [1] | [Modelo] | [Función] |
-
----
-
-## Esquemáticos / Planos
-- [Plano/Esquemático 1] → `PLANOS/[archivo]`
-- [Plano/Esquemático 2] → `PLANOS/[archivo]`
-
----
-
-## Fotos / Videos
-- Foto 1 → `MULTIMEDIA/[archivo]`
-- Foto 2 → `MULTIMEDIA/[archivo]`
-- Video demo → `MULTIMEDIA/[archivo]` o [link]
-
----
-
-## Estructura del repositorio
-- `CODIGO/` — Código fuente del proyecto.
-- `MULTIMEDIA/` — Imágenes y videos.
-- `PLANOS/` — Esquemáticos y diagramas.
-- `DATASHEET/` — Hojas de datos y especificaciones.
-- `INFORMES/` — Informes, Gantt, manuales, PDFs.
-
----
-
-## Autor
-**[APELLIDO, Nombre]** — [Legajo]  
-Contacto (opcional): [mail / LinkedIn]
-
----
-
-## Licencia
-[Definir según la cátedra: MIT / uso académico / etc.]
-
----
-
-## About (descripción corta del repositorio)
-
-Usar este texto (o similar) en el campo **About** de GitHub:
-
-**[PPS | PF] — [Proyecto] — FI-UNLZ — [2026] [1C|2C] — [Apellido1, Apellido2]**
