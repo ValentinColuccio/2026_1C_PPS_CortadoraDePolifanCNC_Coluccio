@@ -153,7 +153,7 @@ El procedimiento general de utilización es el siguiente:
 │   └── ...
 │
 ├── Documentacion/
-│    └── Informe.pdf
+│    └── PPS-Coluccio.pdf
 │
 └──Multimedia/
     ├── LogoInstitucional.png
