@@ -1,4 +1,4 @@
-![Diagrama general del sistema](./Imagenes/LogoInstitucional.png)
+![Diagrama general del sistema](./multimedia/LogoInstitucional.png)
 ---
 <h1 align="center">
   Cortadora de polifan CNC orientada a prototipos de alas de aviones livianos
@@ -92,7 +92,7 @@ Durante el desarrollo del proyecto se emplearon distintas tecnologías de diseñ
 
 A continuación se presenta el diagrama general del sistema desarrollado. En él se muestran los principales componentes de la arquitectura de control, alimentación y accionamiento de la máquina, así como las interconexiones entre ellos.
 
-![Diagrama general del sistema](./Imagenes/DiagramaGeneral.png)
+![Diagrama general del sistema](./Multimedia/DiagramaGeneral.png)
 
 # 🖼️ Fotos
 
@@ -100,19 +100,19 @@ A continuación se presentan algunas imágenes representativas de las distintas 
 
 ## Modelo CAD
 
-![Diagrama general del sistema](./Imagenes/Fotos/ModeloCAD.png)
+![Diagrama general del sistema](./Multimedia/Fotos/ModeloCAD.png)
 
 ## Máquina ensamblada
 
-![Diagrama general del sistema](./Imagenes/Fotos/MaquinaCompleta.jpg)
+![Diagrama general del sistema](./Multimedia/Fotos/MaquinaCompleta.jpg)
 
 ## Estructura mecánica
 
-![Diagrama general del sistema](./Imagenes/Fotos/EstructuraMecanica.jpg)
+![Diagrama general del sistema](./Multimedia/Fotos/EstructuraMecanica.jpg)
 
 ## Sistema electrónico
 
-![Diagrama general del sistema](./Imagenes/Fotos/SistemaElectronico.jpg)
+![Diagrama general del sistema](./Multimedia/Fotos/SistemaElectronico.jpg)
 
 # 📝 Instrucciones de uso
 
@@ -155,15 +155,18 @@ El procedimiento general de utilización es el siguiente:
 ├── Documentacion/
 │    └── Informe.pdf
 │
-└──Imagenes/
+└──Multimedia/
     ├── LogoInstitucional.png
     ├── DiagramaGeneral.png
     │
-    └── Fotos/
-        ├── ModeloCAD.png
-        ├── MaquinaCompleta.jpg
-        ├── EstructuraMecanica.jpg
-        └── SistemaElectronico.jpg
+    ├── Fotos/
+    |   ├── ModeloCAD.png
+    |   ├── MaquinaCompleta.jpg
+    |   ├── EstructuraMecanica.jpg
+    |   └── SistemaElectronico.jpg
+    └── Videos/
+        ├── Movimiento manual del eje X.mp4
+        ├── Movimiento manual del eje Y.mp4
 ```
 
 El repositorio contiene la documentación técnica, modelos CAD, fotografías, esquemáticos y hojas de datos de los principales componentes utilizados durante el desarrollo del proyecto. Además, se incluye una versión del ensamblaje completo en formato STEP para facilitar su visualización y reutilización en distintos programas CAD.
