@@ -1,4 +1,4 @@
-![Diagrama general del sistema](./multimedia/LogoInstitucional.png)
+![LogoFacultad](./Multimedia/LogoInstitucional.png)
 ---
 <h1 align="center">
   Cortadora de polifan CNC orientada a prototipos de alas de aviones livianos
@@ -185,7 +185,7 @@ Ingeniería Mecatrónica – Universidad Nacional de Lomas de Zamora (FI-UNLZ)
 ---
 
 <p align="center">
-  <img src="Imagenes/LogoInstitucional.png" alt="Logo FiUNLZ" width="320">
+  <img src="Multimedia/LogoInstitucional.png" alt="Logo FiUNLZ" width="320">
 </p>
 
 
